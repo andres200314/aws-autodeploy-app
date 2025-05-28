@@ -30,4 +30,7 @@ terraform plan -out=tfplan
 echo "⚙️ Aplicando infraestructura..."
 terraform apply tfplan
 
+
 echo "✅ Despliegue completado."
+ip=$(terraform output -raw ip_publica)
+echo "🌐 Accede a la aplicación en http://$ip"
