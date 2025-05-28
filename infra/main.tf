@@ -5,7 +5,7 @@ provider "aws" {
 # Crear key pair a partir de tu llave pública local (~/.ssh/id_rsa.pub)
 resource "aws_key_pair" "mi_key" {
   key_name   = "mi-llave-ec2"
-  public_key = file("~/.ssh/id_ed25519.pub")
+  public_key = file("ssh_public_key")
 }
 
 # Crear VPC

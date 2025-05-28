@@ -1,7 +1,5 @@
 # aws-autodeploy-app
 
-# Terraform Infraestructura – Proyecto Final
-
 Este repositorio contiene la configuración de Terraform para desplegar la infraestructura del proyecto final de Telemática.
 
 ## 📦 Requisitos
@@ -12,6 +10,22 @@ Este repositorio contiene la configuración de Terraform para desplegar la infra
 
 ## 🔐 Configurar Credenciales de AWS
 Antes de ejecutar el script asegúrate de haber configurado las credenciales de AWS en tu entorno local:
-
 ```bash
 aws configure
+
+## 🔑 Modificar archivo main.tf linea 8 (public_key = file("ssh_public_key"))
+public_key = file("ruta/a/tu/ssh_public_key")
+
+
+## ⚙️ Brindar permisos de ejecucion
+```bash
+chmod +x deploy.sh
+chmod +x destroy.sh
+
+## 🏗️ Levantar la infraestructura
+```bash
+./deploy.sh
+
+## 🧨 Destruir la infraestructura
+```bash
+./destroy.sh
