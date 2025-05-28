@@ -105,7 +105,7 @@ resource "aws_instance" "servidor_ubuntu" {
                 git clone https://github.com/andres200314/aws-autodeploy-app.git /home/ubuntu/proyecto
                 cd /home/ubuntu/proyecto/app
                 docker build -t app-2048 .
-                docker run -d -p 80:80 nginx:alpine
+                docker run -d -p 80:80 app-2048
                 EOF
 
   tags = {
